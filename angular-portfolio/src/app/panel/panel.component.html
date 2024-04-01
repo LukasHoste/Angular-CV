@@ -1,14 +1,14 @@
 <div>
-<section>
-    <!-- @for (page of pages; track $index) {
-        <p>{{page}}</p>
-    } -->
-    @for (image of images; track $index) {
-            <div class="tilt container">
-                <img src="{{image.url}}" alt="">
-                <div class="centered">{{image.name}}</div>
-            </div>
-        
-    }
-</section>
-</div>
+    <section>
+        <!-- @for (page of pages; track $index) {
+            <p>{{page}}</p>
+        } -->
+        @for (image of images; track $index) {
+                <div class="tilt container" >
+                    <img src="{{image.url}}" alt="" (click)="navigation(image.name)">
+                    <div id="text" class="centered">{{image.name}}</div>
+                </div>
+            
+        }
+    </section>
+    </div>
